@@ -1,4 +1,4 @@
-/* https://www.htmlecsspro.com/artigo/formulario-de-login-e-cadastro-com-html5-e-css3 */
+/* CSS reset */
 *, *:before, *:after { 
   margin:0;
   padding:0;
@@ -28,7 +28,7 @@ a.links{
 /* formatando o cabeçalho dos formulários */
 h1{
   font-size: 48px;
-  color: #066a75;
+  color: #071d41;
   padding: 10px 0;
   font-family: Arial,sans-serif;
   font-weight: bold;
@@ -89,7 +89,7 @@ input:not([type="checkbox"]){
 input[type="submit"]{
   width: 100%!important;
   cursor: pointer;  
-  background: #3d9db3;
+  background: #071d41;
   padding: 8px 5px;
   color: #fff;
   margin-top: 35px;
@@ -102,19 +102,123 @@ input[type="submit"]{
   
   transition: all 0.2s linear;
 }
+
 input[type="submit"]:hover{
   background: #1a606d;
 }
 
+.link{
+  position: absolute;
+  background: #e1eaeb;
+  color: #7f7c7c;
+  left: 0px;
+  height: 20px;
+  width: 550px;
+  padding: 17px 30px 20px 30px;
+  font-size: 16px;
+  text-align: center;
+  border-top: 1px solid #dbe5e8;
+ 
+  -webkit-border-radius: 0 0  5px 5px;
+  border-radius: 0 0  5px 5px;
+}
+ 
+.link a {
+  font-weight: bold;
+  background: #f7f8f1;
+  padding: 6px;
+  color: rgb(7, 29 , 65);
+  margin-left: 10px;
+  border: 1px solid #DCDCDC;
+ 
+  -webkit-border-radius: 4px;
+  border-radius: 4px;  
+ 
+  -webkit-transition: all 0.4s linear;
+  transition: all 0.4s  linear;
+}
+ 
+.link a:hover {
+  color: #F8F8F8;
+  background: #071d41;
+  border: 1px solid #071d41;
+}
+
+/* Efeito ao clicar no botão ( Ir para Login ) */
+#paracadastro:target ~ .content #cadastro,
+#paraexcluir:target ~ .content #login{
+  z-index: 2;
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+ 
+  -webkit-animation-delay: .1s;
+  animation-delay: .1s;
+}
+
 /* estilos para para ambos os formulários */
-#cadastro{
+#cadastro, 
+#login{
   position: absolute;
   top: 0px;
-  width: 88%; 
+  width: 88%;   
   padding: 18px 6% 60px 6%;
-  background: rgb(247, 247, 247);
+  margin: 0 0 35px 0;
+  background: #F8F8F8;
   border: 3px solid rgba(147, 184, 189,0.8);
-  
+   
   border-radius: 10px;
+   
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease;
+  -webkit-animation-fill-mode: both;
+ 
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+}
 
+/*fadeInLeft*/
+@-webkit-keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+}
+ 
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+ 
+/*fadeOutLeft*/
+@-webkit-keyframes fadeOutLeft {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+  }
+}
+ 
+@keyframes fadeOutLeft {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
 }
