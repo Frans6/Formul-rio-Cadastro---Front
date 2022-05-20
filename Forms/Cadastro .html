@@ -5,11 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
-<body>
+<body bgcolor = "#071d41">
   <div class="container" >
     <a class="links" id="paracadastro"></a>
+    <a class="links" id="paraexcluir"></a>
      
-    <div class="content">      
+    <div class="content">
+
+    <!--FORMULÁRIO DE LOGIN-->
+      <div id="login">
+        <form method="post" action=""> 
+          <h1>Excluir Cadastro</h1> 
+           <p> 
+            <label for="nome_cad">Nome</label>
+            <input id="nome_cad" name="nome_cad" required="required" type="text" placeholder="ex.: Joana" />
+          </p>
+           
+          <p> 
+            <label for="senha_cad">CPF</label>
+            <input id="senha_cad" name="senha_cad"  type="text" pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" placeholder="ex.: 000.000.000-00"/>
+          </p>
+           
+          <p> 
+            <input type="submit" value="Buscar Cadastro" /> 
+          </p>
+           
+          <p class="link">
+            Cadastrar uma conta?
+            <a href="#paracadastro">Cadastre-se</a>
+          </p>
+        </form>
+      </div>      
  
       <!--FORMULÁRIO DE CADASTRO-->
       <div id="cadastro">
@@ -28,12 +54,12 @@
 
 	  <p> 
             <label for="senha_cad">CPF</label>
-            <input id="senha_cad" name="senha_cad" required="required" type="text" pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" placeholder="ex.: 000.000.000-00"/>
+            <input id="senha_cad" name="senha_cad"  type="text" pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" placeholder="ex.: 000.000.000-00"/>
           </p>
            
 	  <p> 
             <label for="senha_cad">Data de Nascimento</label>
-            <input id="senha_cad" name="senha_cad" required="required" type="date" placeholder="ex.: 00/00/0000"/>
+            <input id="senha_cad" name="senha_cad" required="required" type="date">
           </p>
 
 	  <p> 
@@ -48,7 +74,7 @@
            
           <p> 
             <label for="senha_cad">Unidade ID</label>
-            <input id="senha_cad" name="senha_cad" required="required" type="number" placeholder="ex.: abcd"/>
+            <input id="senha_cad" name="senha_cad" required="required" type="text" placeholder="ex.: abcd"/>
           </p>
 
 	  <p> 
@@ -58,7 +84,7 @@
 
 	  <p> 
             <label for="senha_cad">Carga Horária</label>
-            <input id="senha_cad" name="senha_cad" required="required" type="tel" placeholder="ex.: abcd"/>
+            <input id="senha_cad" name="senha_cad" required="required" type="text" placeholder=""/>
           </p>
 
           <p> 
@@ -71,8 +97,13 @@
             <input id="senha_cad" name="senha_cad" required="required" type="tel" placeholder="ex.: abcd"/>
           </p>
 	
-          <input type="submit" value="Cadastrar"/> 
-           
+          <input type="submit" value="Cadastrar"/>
+	  
+	  <p>
+	  <p class="link">  
+            Não quer cadastrar?
+            <a href="#paraexcluir"> Apagar Cadastro </a> 
+          </p> 
         </form>
       </div>
     </div>
